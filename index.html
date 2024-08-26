@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encriptador de Texto</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">"
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+     
+    <div class="logo-alura">
+        <img src="imagenes/Logo.png" alt="logo-alura">
+    </div>
+    <div class="container">
+        <section class="input-section">
+            <textarea id="inputTexto" placeholder="ingrese el texto aqui"></textarea>
+            <div class="input-informacion">
+                <img src="imagenes/Group.png" alt="informacion" class="icono-info">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="buttons-container">
+                <button id="encriptar">Encriptar</button>
+                <button id="desencriptar">Desencriptar</button>                
+            </div>
+        </section>
+
+        <section class="output-section">
+            <img src="imagenes/Figura.png" alt="Imagen" class="figura">
+            <p class="mensaje"><b>Ningún mensaje fue encontrado</b></p>
+            <p class="mensaje-instruccion">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <textarea id="resultado" readonly></textarea>
+            <button id="copiar-encriptado" style="display: none;">Copiar</button>
+        </section>
+    </div>
+
+    <footer class="footer">        
+        <p>Desarrollado por Melkis Daniel Laguna Gomez. @ 2024.</p>
+    </footer>
+    <script src="encriptar.js"></script>
+    
+
     
 </body>
 </html>
