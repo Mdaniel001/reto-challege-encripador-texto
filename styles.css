@@ -22,7 +22,7 @@ body {
     width: 80px; 
 }
 
-h1, p, button {
+h1,h2, p, button {
     font-family: 'DM Serif Text', sans-serif;
 }
 /* Contenedor principal */
