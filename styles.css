@@ -1,0 +1,219 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'DM Serif Text', sans-serif;
+    background-color:#a8af69;
+    color: #565e34;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo-alura {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo-alura img {
+    width: 80px; 
+}
+
+h1, p, button {
+    font-family: 'DM Serif Text', sans-serif;
+}
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre secciones dentro del contenedor */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+/* Secciones de entrada y salida */
+.input-section, .output-section {
+    flex: 1; /* Permite que ambas secciones crezcan de manera uniforme */
+    min-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.input-section {
+    background-color: #cac57a; 
+}
+
+.output-section {
+    background-color: #cac57a; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-informacion {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 0; /* Reduce o elimina el margen inferior para acercarlo a los botones */
+    font-size: 0.9rem; 
+    color: #2c38a8;
+}
+
+.icono-info {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px; 
+}
+
+img.figura {
+    display: block; 
+    margin: 0 auto; 
+    width: 336px; 
+    height: 304px; 
+    object-fit: cover; 
+}
+
+.input-section textarea, .output-section textarea {
+    width: 100%;
+    height: 288px; 
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    background-color: #E5E5E5;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Añade espacio debajo del textarea */
+}
+
+.output-section textarea {
+    background-color: #FFFFFF; /* Cambia el fondo del textarea a blanco */
+}
+
+/* Estilos para el mensaje "Ningún mensaje fue encontrado" */
+.mensaje {
+    font-size: 1.5rem;
+    font-family: 'DM Serif Text', sans-serif;
+    color: #2A3B61; 
+    text-align: center; 
+    margin-bottom: 0px; 
+}
+
+/* Estilos para las instrucciones */
+.mensaje-instruccion {
+    font-size: 1rem;
+    font-family: 'DM Serif Text', sans-serif; 
+    color: #495057; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    margin-top: 0; 
+}
+
+/* Ajuste de los botones */
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.2rem; /* Aumenta la distancia entre los botones y el textarea */
+}
+
+.buttons-container button, #copiar-encriptado {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%; /* Botones ajustables en ancho */
+}
+
+#encriptar:hover {
+    background-color: #b99cbd; 
+}
+
+#desencriptar:hover, #copiar-encriptado:hover {
+    background-color: #81a0a0; 
+    color: white;
+    border-color: #6d5f13;
+}
+
+
+/* Ocultar el botón copiar por defecto */
+textarea#resultado, #copiar-encriptado {
+    display: none; /* Oculta el textarea y el botón por defecto */
+}
+
+
+
+
+#encriptar {
+    background-color:#0A3871;
+    color: white;
+}
+
+#desencriptar, #copiar-encriptado {
+    background-color: #D8DFE8;
+    color: #34495E;
+    border: 2px solid #34495E;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: #0c131a;
+    color: rgb(180, 148, 148);
+    padding: 2px;
+    text-align: center;
+    font-size: 1.15rem;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-section, .output-section {
+        width: 100%;
+        margin: 10px;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .output-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        padding: 0.5rem; /* Asegura que el padding sea consistente en pantallas más pequeñas */
+        font-size: 0.875rem; /* Tamaño del texto más pequeño */
+    }
+
+    /* Ajustes para el logo */
+    .logo {
+        position: static; /* Cambia a estático en pantallas más pequeñas para que no se superponga */
+        margin: 20px 0px; /* Añade margen para separar el logo del contenido */
+    }
+    
+    .logo img {
+        width: 60px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    }
+}
+

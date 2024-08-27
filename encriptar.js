@@ -26,7 +26,7 @@ function desencriptarTexto(texto){
 function toggleOutputElements() {
     const resultado = document.getElementById("resultado").value.trim();
     const mensajeEncontrado = document.querySelector(".mensaje");
-    const instrucciones = document.querySelector(".instrucciones");
+    const instrucciones = document.querySelector(".mensaje-instruccion");
     const figura= document.querySelector(".output-section img");
     const botonCopiar = document.getElementById("copiar-encriptado");
     const textAreaResultado = document.querySelector("textarea#resultado");
@@ -65,10 +65,10 @@ document.getElementById('desencriptar').addEventListener("click", function(){
 
 //enlace con boton copiar  y su funcion
 
-document.getElementById('copiar').addEventListener("click",function(){
+document.getElementById('copiar-encriptado').addEventListener("click",function(){
     const resultado = document.getElementById("resultado");
     resultado.select();
-    resultado.setSelectionRange(0.99999);
+    resultado.setSelectionRange(0, 9999);
 
     //se copia el texto 
     navigator.clipboard.writeText(resultado.value).then(() => {
